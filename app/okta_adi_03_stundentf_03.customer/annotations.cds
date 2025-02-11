@@ -1,0 +1,1 @@
+using okta_adi_03_stundentf_03Srv as service from '../../srv/service';
