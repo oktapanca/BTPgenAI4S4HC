@@ -27,7 +27,7 @@
                     return Controller.extend("PreviewController", {
                         onInit: function () {
 
-                            const data = {"Services":[{"ServiceName":"okta_adi_03_stundentf_03Srv","DetailsURL":"./service/okta_adi_03_stundentf_03/","Metadata":"./service/okta_adi_03_stundentf_03/$metadata","Entities":[{"Name":"CustomerMessage","URL":"./service/okta_adi_03_stundentf_03/CustomerMessage","FioriURL":"$fiori-preview/okta_adi_03_stundentf_03Srv/CustomerMessage#preview-app"}],"EntitiesCount":1}]}
+                            const data = {"Services":[{"ServiceName":"okta_adi_03_stundentf_03Srv","DetailsURL":"./service/okta_adi_03_stundentf_03/","Metadata":"./service/okta_adi_03_stundentf_03/$metadata","Entities":[{"Name":"CustomerMessage","URL":"./service/okta_adi_03_stundentf_03/CustomerMessage","FioriURL":"$fiori-preview/okta_adi_03_stundentf_03Srv/CustomerMessage#preview-app"},{"Name":"A_ServiceOrder","URL":"./service/okta_adi_03_stundentf_03/A_ServiceOrder","FioriURL":"$fiori-preview/okta_adi_03_stundentf_03Srv/A_ServiceOrder#preview-app"},{"Name":"ProductFAQ","URL":"./service/okta_adi_03_stundentf_03/ProductFAQ","FioriURL":"$fiori-preview/okta_adi_03_stundentf_03Srv/ProductFAQ#preview-app"}],"EntitiesCount":3}]}
                             this.getView().setModel(new JSONModel(data));
                         }
                     });

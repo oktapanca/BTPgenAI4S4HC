@@ -7,6 +7,8 @@
   "private": true,
   "dependencies": {
     "@cap-js/hana": "^1",
+    "@sap-ai-sdk/foundation-models": "^1.7.0",
+    "@sap-ai-sdk/orchestration": "^1.7.0",
     "@sap-cloud-sdk/http-client": "^3.26.0",
     "@sap-cloud-sdk/util": "^3.26.0",
     "@sap/cds": "^8",
@@ -28,7 +30,8 @@
     "start-local": "npm run generate-entry-point && npm run cds-watch",
     "generate-entry-point": "dev-cap-tools gen-entrypoint",
     "cds-watch": "cds watch --open",
-    "watch-okta_adi_03_stundentf_03.customer": "cds watch --open okta_adi_03_stundentf_03.customer/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-okta_adi_03_stundentf_03.customer": "cds watch --open okta_adi_03_stundentf_03.customer/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-okta_adi_03_stundentf_03.productfaqapplication": "cds watch --open okta_adi_03_stundentf_03.productfaqapplication/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
     "sql": {
@@ -49,11 +52,23 @@
         "[production]": {
           "kind": "xsuaa"
         }
+      },
+      "S4HCP_ServiceOrder_Odata": {
+        "kind": "odata-v2",
+        "csrf": true,
+        "csrfInBatch": true,
+        "model": "srv/external/S4HCP_ServiceOrder_Odata",
+        "[production]": {
+          "credentials": {
+            "destination": "S4HCP-ServiceOrder-Odata"
+          }
+        }
       }
     }
   },
   "lcap": true,
   "sapux": [
-    "app/okta_adi_03_stundentf_03.customer"
+    "app/okta_adi_03_stundentf_03.customer",
+    "app/okta_adi_03_stundentf_03.productfaqapplication"
   ]
 }
